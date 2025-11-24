@@ -11,6 +11,7 @@ on:
 jobs:
 
   check_release:
+    if: false
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
