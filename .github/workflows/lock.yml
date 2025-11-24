@@ -12,6 +12,7 @@ permissions:
 
 jobs:
   lock:
+    if: false
     runs-on: ubuntu-latest
     steps:
       - uses: dessant/lock-threads@v5

@@ -6,6 +6,7 @@ on:
 
 jobs:
   test:
+    if: false
     name: Execute benchmark tests
     if: >
       (

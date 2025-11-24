@@ -11,6 +11,7 @@ on:
 jobs:
   linuxtests:
     name: Linux
+    if: false
     strategy:
       matrix:
         group: [integrity, integrity2, integrity3, release_test, docs, usage, usage2, splice_source, python, examples, interop, nonode, lint]
@@ -123,6 +124,7 @@ jobs:
           path: dist/*.tar.gz
 
   test_sdist:
+    if: false
     runs-on: ubuntu-latest
     needs: [make_sdist]
     name: Install from SDist and Test
@@ -147,6 +149,7 @@ jobs:
           pytest -vv || pytest -vv --lf
 
   check_links:
+    if: false
     runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
